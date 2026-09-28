@@ -1,3 +1,8 @@
+"""
+Creates or updates a maintenance in Zabbix for
+the next week (Monday to Friday) excluding holidays.
+"""
+
 import json
 import os
 import requests
@@ -7,9 +12,10 @@ from dotenv import load_dotenv
 import logging
 
 # --------- init ------------
-
 load_dotenv()
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
+)
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +75,10 @@ def get_maintenance_id(name):
 
 
 def create_timeperiods():
-    """Create time periods for the next week (Monday to Friday) excluding holidays."""
+    """
+    Create time periods for the next week
+    (Monday to Friday) excluding holidays.
+    """
     curr_date = now.date()
 
     days_until_monday = 7 - curr_date.weekday()
