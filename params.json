@@ -1,0 +1,8 @@
+{
+    "maintenance_name": "Weekly work time exception for ZBX_USERS_SBA hosts using SLA 9x5",
+    "host_group": "Application_3::9x5",
+    "holiday_api_url": "https://date.nager.at/api/v3/PublicHolidays",
+    "work_start_hour": 8,
+    "work_end_hour": 17,
+    "description": "Weekly work time exception for SLA 9x5 hosts under ZBX_USERS_SBA host group. Created by script every sunday, do not remove."
+}
